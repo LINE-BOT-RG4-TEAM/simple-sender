@@ -8,9 +8,9 @@
   // which is included in the download:
   // https://github.com/sendgrid/sendgrid-php/releases
   $email = new \SendGrid\Mail\Mail(); 
-  $email->setFrom("test@example.com", "Example User");
+  $email->setFrom("mean.mea2@gmail.com", "Cheevavorn Saitthakool");
   $email->setSubject("Sending with SendGrid is Fun");
-  $email->addTo("mean.mea2@gmail.com", "Example User");
+  $email->addTo("chiwawon.sae@pea.co.th", "chiwawon saetakul");
   $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
   $email->addContent(
       "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
