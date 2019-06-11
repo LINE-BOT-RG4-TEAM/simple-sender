@@ -1047,15 +1047,12 @@
 
   $email = new \SendGrid\Mail\Mail(); 
   $email->setFrom("crm_bu@pea.co.th", "Support PEA SmartBiz");
-  $email->setSubject("เอกสารหลักฐานการสั่งซื้อบริการเสริมจาก กฟภ. รหัสคำสั่งซื้อ PO00009");
+  $email->setSubject("คำสั่งซื้อ #PO00009 - เอกสารหลักฐานการสั่งซื้อบริการเสริมจาก กฟภ.");
   $email->addTo("mean.mea2@gmail.com", "Cheevavorn Saitthakool");
 //   $email->addTo("chiwawon.sae@pea.co.th", "chiwawon saetakul");
   $email->addContent(
       "text/html", $html_template
   );
-//   $email->addContent(
-//       "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
-//   );
   $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
   try {
       $response = $sendgrid->send($email);
